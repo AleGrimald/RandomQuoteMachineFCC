@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#quote-box{
+  width:50vw;
+  height:40vh;
+  padding: 2rem 5rem;
+  border-radius: 15px;
+  opacity: .8;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column nowrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  gap: 2rem;
+}
+
+.container__botones{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#tweet-quote{
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.boton{
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.boton:active{
+  background-color: rgb(149, 250, 250);
+  box-shadow: 0 0 15px 2px gold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.container__texto{
+  width: 100%;
+  height:20rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap:2rem;
+}
+#text{
+  height: 75%;
+  width: 100%;
+  color:white;
+  text-align:left;
+  font-size: 20px;
+  font-weight: 500;
+}
+#author{
+  height: 20%;
+  width: 100%;
+  padding-right: 0rem;
+  color:white;
+  text-align:right;
+  font-size: 14px;
+  font-weight: 500;
 }
