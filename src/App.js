@@ -1,12 +1,16 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './App.css';
 import {useEffect, useState} from 'react';
 function App() {
   const [quote, setQuote]=useState({});
   const [color, setColor]=useState('FFFFFF');
   const [colorFondo, setColorFondo]= useState('FFFFFF');
-  useEffect(()=>{getQuote();},[ ]);
+  
+  useEffect(()=>{
+    getQuoteNueva();
+  },[]);
 
-  const getQuote = ()=>{
+  const getQuoteNueva = ()=>{
     fetch('https://api.quotable.io/random')
     .then((response)=>{return response.json()})
     .then((data)=>{
@@ -63,7 +67,7 @@ function App() {
             href={'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text='+quote.text}>
             Post to twitter
           </a>
-          <button className="boton" id="new-quote" onClick={getQuote}>New Quote</button>
+          <button className="boton" id="new-quote" onClick={getQuoteNueva}>New Quote</button>
 
         </div>
         
