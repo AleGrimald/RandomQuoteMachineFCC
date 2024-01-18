@@ -4,7 +4,7 @@ function App() {
   const [quote, setQuote]=useState({});
   const [color, setColor]=useState('FFFFFF');
   const [colorFondo, setColorFondo]= useState('FFFFFF');
-  useEffect(()=>{getQuote();},[]);
+  useEffect(()=>{getQuote();},[ ]);
 
   const getQuote = ()=>{
     fetch('https://api.quotable.io/random')
